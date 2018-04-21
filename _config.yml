@@ -103,7 +103,7 @@ author:
   picture: /images/michael-rose-photo.jpg
   email:
           #  twitter: mmistakes
-          #  links:
+links: false
           #    - title: Twitter
           #      url: https://twitter.com/mmistakes
           #      icon: fab fa-twitter-square
