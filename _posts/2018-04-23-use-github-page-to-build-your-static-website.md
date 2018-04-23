@@ -7,7 +7,7 @@ tags:
  - sharings
 ---
 
-Just couple days ago I learned that Github provides a free static web hosting services call [Github Pages](https://pages.github.com/) and instantly I changed from hosting my own VM to this fantastic service!  And for the very first post of my new home, I am going to show you all just how easy it is to start using and building static website on GitHub Pages!  For more information about Github Pages, please click the link above!
+Just couple days ago I learned that Github provides a free static web hosting services call [Github Pages](https://pages.github.com/){:target="_blank"} and instantly I changed from hosting my own VM to this fantastic service!  And for the very first post of my new home, I am going to show you all just how easy it is to start using and building static website on GitHub Pages!  For more information about Github Pages, please click the link above!
 
 First of all, you need to have an [Github account](https://www.github.com).  After logged into your account, click on "Start a project".
 <br>![github](/assets/images/2018042314.png)
