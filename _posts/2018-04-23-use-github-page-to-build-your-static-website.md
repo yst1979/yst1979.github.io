@@ -13,7 +13,7 @@ First of all, you need to have an [Github account](https://www.github.com).  Aft
 <br>![github](2018042314.png)
 
 Create a new repository like the image below.  Be aware that in order for GitHub Pages to work, the name of your repository <u>**MUST**</u> be in the form of `yourusername.github.io`.  Check the "README" box to make job easier later, then click Create repository.
-<br>![github repository](assets/images/2018042315.png)
+<br>![github repository](/assets/images/2018042315.png)
 
 Once your repository is created, click the Settings tab to check your github pages status.
 <br>![github settings](assets/images/2018042317.png)
