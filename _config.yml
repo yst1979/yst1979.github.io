@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+title: Bulafish@IT
+subtitle: Learn from internet, share to internet!
+description: Learn from internet, share to internet! AWS GCP CENTOS DEVOPS
+author: Bulafish
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: en
 date_format: '%Y-%m-%d'
@@ -19,7 +19,7 @@ baseurl:
 permalink: pretty
 
 # Pagination
-paginate: 10
+paginate: 6
 #paginate_path: "/page:num/"
 #archive:
   #paginate: 10
@@ -59,8 +59,8 @@ defaults:
       comments: true
 
 # Atom feed
-feed:
-  path: atom.xml
+# feed:
+#   path: atom.xml
 
 # Plugins
 ## Docs: https://help.github.com/articles/configuring-jekyll-plugins/
@@ -68,7 +68,7 @@ plugins:
 # jemoji conficts with toc in some no-ascii post
 # - jemoji
  - jekyll-sitemap
- - jekyll-feed
+ # - jekyll-feed
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -78,7 +78,7 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Jekyll, NexT"
+keywords: "bulafish, bulafish@it, gcp, aws, centos, devops"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -117,8 +117,8 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
+  categories: /categories/
+  about: /about/
   archives: /archives/
   tags: /tags/
   #sitemap: /sitemap.xml
@@ -310,7 +310,7 @@ auto_excerpt:
 post_meta:
   item_text: true
   created_at: true
-  updated_at: false
+  updated_at: true
   categories: true
 
 # Post wordcount display settings
@@ -328,7 +328,7 @@ post_wordcount:
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -451,10 +451,10 @@ google_analytics: UA-19138502-4
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
+# duoshuo_info:
+#   ua_enable: false
+#   admin_enable: false
+#   user_id: 0
   #admin_nickname: Author
 
 
@@ -559,10 +559,10 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
-  trigger: auto
+  trigger: manual
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
