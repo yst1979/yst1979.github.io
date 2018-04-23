@@ -10,7 +10,7 @@ tags:
 Just couple days ago I learned that Github provides a free static web hosting services call [Github Pages](https://pages.github.com/) and instantly I changed from hosting my own VM to this fantastic service!  And for the very first post of my new home, I am going to show you all just how easy it is to start using and building static website on GitHub Pages!  For more information about Github Pages, please click the link above!
 
 First of all, you need to have an [Github account](https://www.github.com).  After logged into your account, click on "Start a project".
-<br>![github](assets/images/2018042314.png)
+<br>![github](2018042314.png)
 
 Create a new repository like the image below.  Be aware that in order for GitHub Pages to work, the name of your repository <u>**MUST**</u> be in the form of `yourusername.github.io`.  Check the "README" box to make job easier later, then click Create repository.
 <br>![github repository](assets/images/2018042315.png)
