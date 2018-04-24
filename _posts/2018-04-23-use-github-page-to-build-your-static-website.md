@@ -18,6 +18,8 @@ Create a new repository like the image below.  Be aware that in order for GitHub
 Once your repository is created, click the Settings tab to check your github pages status.
 <br>![github settings](/assets/images/2018042317.png)
 
+{% include ads3.html %}
+
 Scroll all the way down close to the bottom and you will see the GitHub Pages section.  If everything is setup probably, you will see exactly the same as the image below, beside that the GitHub Pages url will be different!
 <br>![github settings](/assets/images/2018042318.png)
 
