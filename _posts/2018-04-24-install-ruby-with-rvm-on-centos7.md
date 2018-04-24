@@ -73,5 +73,9 @@ After bundle installation, we are all done!
 Now we have a new and clean jekyll theme of our choice!
 <br>Next I will show you all how to upload the theme we just made to GitHub Pages which we have created in last post, stay tuned!
 
+RELATED POSTS:
+<br>[Use Github Pages To Build Your Static Website](https://www.bulafish.com/sharings/2018/04/23/use-github-page-to-build-your-static-website/)
+<br>[Upload Jekyll Theme To Github Pages](https://www.bulafish.com/sharings/2018/04/23/use-github-page-to-build-your-static-website/)
+
 REFERENCES:
 <br>[RVM: Ruby Version Manager](https://rvm.io/)

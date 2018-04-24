@@ -14,7 +14,7 @@ Finally, we are at the final stage of making github pages to work with our own c
 3. Push all the files from your local repository directory to github pages repository.
 4. Enjoy!
 
-## Clone your github pages reposityr
+## Clone your github pages repository
 Use the command below to clone your repository, remember to replace `username` to your github account.  In the image below, you would see that I have the theme cloned along with my github pages repository.
 ```bash
 git clone https://github.com/username/username.github.io
