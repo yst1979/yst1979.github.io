@@ -67,7 +67,7 @@ cd jekyll-theme-next
 rm -rf Gemfile.lock
 bundle install
 ```
-![jekyll theme installation](/assets/images/2018042311.png)
+![jekyll theme installation](/assets/images/2018042313.png)
 
 After bundle installation, we are all done!
 Now we have a new and clean jekyll theme of our choice!
