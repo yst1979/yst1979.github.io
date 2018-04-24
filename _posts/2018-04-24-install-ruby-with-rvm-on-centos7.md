@@ -54,9 +54,9 @@ Now, browse to the github page of the jekyll theme you chose and copy the projec
 <br>![jekyll theme installation](/assets/images/2018042310.png)
 
 In case you have not chosen your theme yet, here are some locations where you can do so.
-<br>[jekyllthemes.org](http://jekyllthemes.org/){:target="_blank"}
-<br>[themes.jekyllrc.org](https://themes.jekyllrc.org/){:target="_blank"}
-<br>[jekyllthemes.io](https://jekyllthemes.io/){:target="_blank"}
+<br>[jekyllthemes.org](http://jekyllthemes.org/)
+<br>[themes.jekyllrc.org](https://themes.jekyllrc.org/)
+<br>[jekyllthemes.io](https://jekyllthemes.io/)
 
 Next, clone the project to your terminal.  I chose a theme called next and cloned it into my /root/ directory.  Once downloaded, delete the Gemfile.lock file in the directory so there will be no error when we do bundle install next.
 ```bash
