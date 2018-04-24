@@ -5,7 +5,7 @@ categories:
  - sharings
  - CentOS
 tags:
- - Ruby
+ - Github Pages
 ---
 
 Yesterday, we talked about how to get your [Github Pages](https://pages.github.com/) working, for more information, <br>please visit : [Use Github Pages To Build Your Static Website](https://www.bulafish.com/sharings/2018/04/23/use-github-page-to-build-your-static-website/).
