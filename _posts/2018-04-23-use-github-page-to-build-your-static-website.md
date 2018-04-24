@@ -33,5 +33,3 @@ Easy and simple right?
 <br>[jekyllthemes.io](https://jekyllthemes.io/)
 
 Next I will show you all how to implement the theme of your choices and more, stay tuned!
-
-{% include ads1.html %}

@@ -72,3 +72,6 @@ bundle install
 After bundle installation, we are all done!
 Now we have a new and clean jekyll theme of our choice!
 <br>Next I will show you all how to upload the theme we just made to GitHub Pages which we have created in last post, stay tuned!
+
+REFERENCES:
+<br>[RVM: Ruby Version Manager](https://rvm.io/)
