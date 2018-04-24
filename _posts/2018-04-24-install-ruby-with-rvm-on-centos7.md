@@ -38,6 +38,8 @@ ruby -v
 ```
 ![ruby installation](/assets/images/2018042308.png)
 
+{% include ads3.html %}
+
 Install bundler with gem for jekyll theme later usage.
 ```bash
 gem install bundler
@@ -70,5 +72,3 @@ bundle install
 After bundle installation, we are all done!
 Now we have a new and clean jekyll theme of our choice!
 <br>Next I will show you all how to upload the theme we just made to GitHub Pages which we have created in last post, stay tuned!
-
-{% include ads1.html %}
