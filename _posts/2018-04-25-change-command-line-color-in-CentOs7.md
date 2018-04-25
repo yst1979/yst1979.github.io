@@ -43,6 +43,8 @@ Now we understand the basic components of the command line prompt, let's put up 
 6. `\$`
 7. A space
 
+{% include ads3.html %}
+
 Re-login to check the result.
 <br>![hostnamectl status](/assets/images/2018042505.png)
 
