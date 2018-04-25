@@ -53,7 +53,7 @@ Now let's start adding colors to the prompt.  The basic syntax of a color is `\[
 A detailed color table is below :
 
 Text Fromat|Text Color|Text Background
-:-|:-|:-
+-|-|-
 0: normal text|30: Black|40: Black
 1: bold|31: Red|41: Red
 4: Underlined text|32: Green|42: Green
