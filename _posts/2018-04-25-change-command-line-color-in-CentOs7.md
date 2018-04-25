@@ -11,7 +11,7 @@ While ago when I was watching someone's youtube and found that his terminal comm
 
 Let's first take a look of the difference between before and after.
 
-Before             |  After
+Before|After
 :-:|:-:
 ![www.bulafish.com](/assets/images/2018042503.png)|![www.bulafish.com](/assets/images/2018042504.png)
 
@@ -53,7 +53,7 @@ Now let's start adding colors to the prompt.  The basic syntax of a color is `\[
 A detailed color table is below :
 
 Text Fromat|Text Color|Text Background
-:|:|:
+:-|:-|:-
 0: normal text|30: Black|40: Black
 1: bold|31: Red|41: Red
 4: Underlined text|32: Green|42: Green
