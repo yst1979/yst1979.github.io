@@ -3,6 +3,8 @@ title: Set Or Change Hostname In CentOS7
 description: Since CentOS7, the way to modify hostname has changed.  Now we use hostnamectl command to do the job.
 categories:
  - CentOS
+tags:
+- Configuration
 ---
 
 In CentOS6, we modify /etc/sysconfig/network to set the servers's hostname but in CentOS7, it was changed to use command line to change or set the hostname.  I did not know this when I first start using CentOS7 until I google about it.  The commands are as below
