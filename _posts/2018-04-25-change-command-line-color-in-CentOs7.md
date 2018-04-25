@@ -12,7 +12,7 @@ While ago when I was watching someone's youtube and found that his terminal comm
 Let's first take a look of the difference between before and after.
 
 Before|After
-:-:|:-:
+-|-
 ![www.bulafish.com](/assets/images/2018042503.png)|![www.bulafish.com](/assets/images/2018042504.png)
 
 Before we start, let's take a look at my hostname first.  I set it to a [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) purposely so we can see the differences later on.
