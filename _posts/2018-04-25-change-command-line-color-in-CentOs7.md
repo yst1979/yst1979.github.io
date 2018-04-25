@@ -26,11 +26,11 @@ echo $PS1
 ```
 ![hostnamectl status](/assets/images/2018042502.png)
 
-We can break the output into three parts which are :
+We can break the output into four parts which are :
 1. `\u` ; prints out the current login username, which is root.
 2. `\h` ; prints out the hostname, which is www, as shown in hostname status.  If we want to show the FQDN, we can change it to `\H`.
 3. `\W` ; prints out the current working directory, which is ~, the home directory of login user.  If we want to show the full working directory, we can change it to `\w`.
-4. `\s` ; prints `$` when user is login, `#` when root is login.
+4. `\$` ; prints `$` when user is login, `#` when root is login.
 
 `$PS1` variable can be saved in `/etc/profile` which will affect all users or `/home/username/.bashrc` which will only affect that particular user.
 
@@ -52,7 +52,7 @@ Now let's start adding colors to the prompt.  The basic syntax of a color is `\[
 
 A detailed color table is below :
 
-Text Fromat|Text Color|Text Background
+Text Fromat|Text Color|Text Background Color
 -|-|-
 0: normal text|30: Black|40: Black
 1: bold|31: Red|41: Red
@@ -70,7 +70,7 @@ With all the infomatin we got,  we can break the "after" result into :
 4. `\[\e[01;37m\]:`
 5. `\[\e[01;32m\]\w`
 6. `\[\e[01;37m\]\$`
-7. `\[\033[0;37m\] ` ( please not that there is a space after `]` sign )
+7. `\[\033[0;37m\] ` ( please note that there is a space after `]` sign )
 
 So the final result will be as follow :
 <br>`PS1='\[\e[01;36m\]\u\[\e[01;37m\]@\[\e[01;33m\]\H\[\e[01;37m\]:\[\e[01;32m\]\w\[\e[01;37m\]\$\[\033[0;37m\] '`
