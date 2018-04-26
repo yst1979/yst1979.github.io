@@ -32,9 +32,9 @@ We can break the output into four parts which are :
 3. `\W` ; prints out the current working directory, which is ~, the home directory of login user.  If we want to show the full working directory, we can change it to `\w`.
 4. `\$` ; prints `$` when user is login, `#` when root is login.
 
-`$PS1` variable can be saved in `/etc/profile` which will affect all users or `/home/username/.bashrc` which will only affect that particular user.
+`$PS1` variable can be saved in `/etc/bashrc` which will affect all users or `/home/username/.bashrc` which will only affect that particular user.
 
-Now we understand the basic components of the command line prompt, let's put up the seven components of the "after" result, which is `\u@\H:\w\$ `, and save it as `PS1='\u@\H:\w\$ '` at the bottom of `/etc/profile`.  Please note that there is a space after the `$` sign, so there will be a space between the `$` or `#` sign and the cursor.  The seven components are :
+Now we understand the basic components of the command line prompt, let's put up the seven components of the "after" result, which is `\u@\H:\w\$ `, and save it as `PS1='\u@\H:\w\$ '` at the bottom of `/etc/bashrc`.  Please note that there is a space after the `$` sign, so there will be a space between the `$` or `#` sign and the cursor.  The seven components are :
 1. `\u`
 2. `@`
 3. `\H`
@@ -77,7 +77,7 @@ With all the infomatin we got,  we can break the "after" result into :
 So the final result will be as follow :
 <br>`PS1='\[\e[01;36m\]\u\[\e[01;37m\]@\[\e[01;33m\]\H\[\e[01;37m\]:\[\e[01;32m\]\w\[\e[01;37m\]\$\[\033[0;37m\] '`
 
-Put it at the bottom of `/etc/profile`, save and exit.  Re-login to see your terminal with pretty colorful prompt!!
+Put it at the bottom of `/etc/bashrc`, save and exit.  Re-login to see your terminal with pretty colorful prompt!!
 
 REFERENCES:
 <br>[BASH Shell: Change The Color of Shell Prompt on Linux or UNIX](https://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/)
