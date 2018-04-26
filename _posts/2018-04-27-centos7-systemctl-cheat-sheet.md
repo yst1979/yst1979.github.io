@@ -80,8 +80,7 @@ Commands to reload, restart.
 systemctl reload crond
 systemctl restart crond
 ```
-![systemctl](/assets/images/2018042612.jpg)
-<br>![systemctl](/assets/images/2018042613.jpg)
+![systemctl](/assets/images/2018042613.jpg)
 
 Commands to enable and disable service at system start up.
 ```
