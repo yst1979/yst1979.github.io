@@ -17,7 +17,7 @@ The content of `/var/log/secure` from remote server actually points out cause of
 {% include ads3.html %}
 
 We can see clearly that the permission of the directories is wrongly set, so all we have to do is set it correctly!  
-The main point to get all these things work is __**NOT**__ to have `write` permission set to the `group`!  
+The main point to get all these things work is **NOT** to have `write` permission set to the `group`!  
 According to [CentOS wiki](https://wiki.centos.org/HowTos/Network/SecuringSSH#head-9c5717fe7f9bb26332c9d67571200f8c1e4324bc), 700 is the preferred permission to the directory but after testing, it will be fine as long as write permission is not set to group.
 
 ## Solution steps
