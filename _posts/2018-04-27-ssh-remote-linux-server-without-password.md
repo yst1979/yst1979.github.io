@@ -37,6 +37,8 @@ ssh-keygen -t rsa -b 4096
 ```
 ![ssh-keygen](/assets/images/2018042702.png)
 
+{% include ads3.html %}
+
 From the image we learn that the generated files are saved at `/home/username/.ssh/` directory and the files are `id_rsa`, which is your private key, and `id_rsa.pub`, which is your public key.  ssh-keygen will prompt you three times, the first one is asking if you would like to specify a file to save the key rather the default value.  Usually we just go with the default value so just hit enter.
 
 The second and third prompt is asking if you would like to set a password to your private key.  This is very important cause the private key is used to / can access to all servers that is setup with private key.  So if anyone get hold of your private key, that person has access to all your servers.  So it is very important to add passphrase to your private key for protection.  If you do not wish to add passphrase, just simpely hit enter at the prompts.
