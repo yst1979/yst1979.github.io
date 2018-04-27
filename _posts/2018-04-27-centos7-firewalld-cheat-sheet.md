@@ -24,13 +24,13 @@ There are nine default zones set by CentOS7, which are
 8. drop
 9. block
 
-For more information about each zone, please refer: [Documentation - Zone - Predefined Zones | firewalld](http://www.firewalld.org/documentation/zone/predefined-zones.html)
+For more information about each zone, please refer: [Documentation - Zone - Predefined Zones \| firewalld](http://www.firewalld.org/documentation/zone/predefined-zones.html)
 
 As usual, we begin with `-h` and it will list out many many many many options!!
 ```
 firewall-cmd -h
 ```
-![firewall-cmd](/assets/images/2018042710.jpg)
+![firewall-cmd](/assets/images/2018042710.png)
 
 Now it is important to know all the zones available in our server, the default zone and the zone it is using right now.
 ```
@@ -38,26 +38,26 @@ firewall-cmd --get-zones
 firewall-cmd --get-default-zone
 firewall-cmd --get-active-zone
 ```
-![firewall-cmd](/assets/images/2018042711.jpg)  
+![firewall-cmd](/assets/images/2018042711.png)  
 we can see that right now our server is using the zone `public`.
 
 Now list out all the predefined services.
 ```
 firewall-cmd --get-services
 ```
-![firewall-cmd](/assets/images/2018042712.jpg)
+![firewall-cmd](/assets/images/2018042712.png)
 
 Check out current status of firewall rule.
 ```
 firewall-cmd --list-all
 ```
-![firewall-cmd](/assets/images/2018042721.jpg)  
+![firewall-cmd](/assets/images/2018042721.png)  
 We can see that right now there are two services that is set open/allow to all, which are ssh and dhcpv6-client.
 
 Let's add http service to firewall rule.  Before we start, let's check the status first.  My destination server ip is 192.168.122.206, http service is not set in the firewall rule, I can see that 80 port is running on the server and I can access to 80 port within `blogdemo`.  
 But from my source server, `coffee`, accessing to `blogdemo's` 80 port is failed.  
-![firewall-cmd](/assets/images/2018042713.jpg)
-![firewall-cmd](/assets/images/2018042714.jpg)
+![firewall-cmd](/assets/images/2018042713.png)
+![firewall-cmd](/assets/images/2018042714.png)
 
 {% include ads3.html %}
 
@@ -65,22 +65,22 @@ Now add http service to `blogdemo's` firewall rule. `--zone=public` is not manda
 ```
 firewall-cmd --add-service=http --zone=public
 ```
-![firewall-cmd](/assets/images/2018042715.jpg)
+![firewall-cmd](/assets/images/2018042715.png)
 
 Now try to access `blogdemo's` 80 port again from `coffee`.  
-![firewall-cmd](/assets/images/2018042716.jpg)
+![firewall-cmd](/assets/images/2018042716.png)
 
 Now if we reload firewalld, we will find that http is remove from service.  That's because when we add http service, it was loaded into the memory but when we reload it, it actually read all the configure from a file located at `/etc/firewalld/zones/public.xml`.  Which work just the same way as iptables.
 ```
 firewall-cmd --reload
 ```
-![firewall-cmd](/assets/images/2018042717.jpg)
+![firewall-cmd](/assets/images/2018042717.png)
 
 Therefore if we want to add a service permanently, we append --permanent at the end of the command and the change is write into the .xml file directly, then we have to reload the service right away so the changes will take effect from .xml file into memory.  Steps are demonstrates at the image below.
 ```
 firewall-cmd --add-service=http --zone=public --permanent
 ```
-![firewall-cmd](/assets/images/2018042718.jpg)
+![firewall-cmd](/assets/images/2018042718.png)
 
 Next we are going to add particular ip with particular service to the rule AND particular ip to all services.  For achieving this, we use `--add-rich-rule`.  Do not forget to reload so the rules will take effect.  For checking rich rules, we can use `--list-rich-rules`.
 ```
@@ -88,7 +88,7 @@ firewall-cmd --add-source=192.168.122.1/32 --zone=public --permanent
 firewall-cmd --add-rich-rule='rule family=ipv4 source address=192.168.122.0/24 service name=ssh accept' --permanent
 firewall-cmd --list-rich-rules
 ```
-![firewall-cmd](/assets/images/2018042719.jpg)
+![firewall-cmd](/assets/images/2018042719.png)
 
 For removing rules, just simply change `add` to `remove`.  Again, don't forget to reload.
 ```
@@ -96,7 +96,7 @@ firewall-cmd --remove-service=http --zone=public
 firewall-cmd --remove-source=192.168.122.1/32 --zone=public --permanent
 firewall-cmd --remove-rich-rule='rule family=ipv4 source address=192.168.122.0/24 service name=ssh accept' --permanent
 ```
-![firewall-cmd](/assets/images/2018042720.jpg)
+![firewall-cmd](/assets/images/2018042720.png)
 
 REFERENCES:  
 [Home | firewalld](http://www.firewalld.org/)  
