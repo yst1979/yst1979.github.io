@@ -7,90 +7,83 @@ tags:
  - Mongodb
 ---
 
-In the previous post, I have installed Mongodb-3.6 Community Edition, please refer here;
-But by default, mongodb starts with no authentication required, meaning that anyone can login to your mongodb.  Therefore in this post, I am going to write about how to add user right and enable authentication.
+In the previous post, I have installed Mongodb-3.6 Community Edition, please refer here: [MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/).  
+By default, mongodb starts with no authentication required, meaning that anyone can login to your mongodb.  Therefore in this post, I am going to write about how to add user rights and enable authentication.
 
 Firs of all, make sure mongod is running.
 ```bash
 ps aux | grep mongod
 ```
+![mongodb authentication](/assets/images/2018043012.png)
 
-We can see clearly that mongod is using the config file from `/etc/mongod.conf`, so we will modify that file later on.  Let's briefly talk about how mongodb authentication works.  Mongodb uses `role` to define/set users with the level and/or power of what they can perform.  For all the built-n roles available, please refer: [Built-In Roles &mdash; MongoDB Manual 3.6](https://docs.mongodb.com/manual/reference/built-in-roles/#userAdminAnyDatabase).  So the steps will be
-1. Create a user in database.
-2. Grant `userAdmin` or `userAdminAnyDatabase` built-in role to the user.
+We can see clearly that mongod is using the config file from `/etc/mongod.conf`, so we will modify that file later on.  Let's briefly talk about how mongodb authentication works.  Mongodb uses `role` to define/set users with the level and/or power of what an user can do.  For all the built-in roles available, please refer: [Built-In Roles &mdash; MongoDB Manual 3.6](https://docs.mongodb.com/manual/reference/built-in-roles/#userAdminAnyDatabase).
 
+And according to the prerequisites, we must
+1. Use [localhost exception](https://docs.mongodb.com/manual/core/security-users/#localhost-exception) to login mongod.
+2. Create our first user in `admin` database granted with [userAdmin](https://docs.mongodb.com/manual/reference/built-in-roles/#userAdmin) or [userAdminAnyDatabase](https://docs.mongodb.com/manual/reference/built-in-roles/#userAdminAnyDatabase) built-in role.
+3. Create other users with user created in step 2.
 
+![mongodb authentication](/assets/images/2018043024.png)
 
-Let's login to mongod
-
-In this post, I am going to use yum to install MongoDB-3.6 from MongoDB's official repository.  First we start with adding a .repo file at location `/etc/yum.repos.d/`.  You can name the file anyway you wish but the extension has to be `.repo`.
-```bash
-vim /etc/yum.repos.d/mongodb.repo
-```
-![mongodb installation](/assets/images/2018043002.png)
-
-Paste the follow code into the .repo file you created, save and exit. You can change `3.6` to the version you want.  For instance, `3.4` or `3.2`.
-```
-[mongodb-org-3.6]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.6/x86_64/
-gpgcheck=1
-enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc
-```
-![mongodb installation](/assets/images/2018043001.png)
-
-Check if the repository is successfully added.
-```bash
-yum repolist
-```
-![mongodb installation](/assets/images/2018043003.png)
-
-Start installing MongoDB.
-```bash
-yum install mongodb-org
-```
-![mongodb installation](/assets/images/2018043004.png)
-
-The functionality of each installed packages.
-<br>![mongodb installation](/assets/images/201804311.png)
-
-After installation, let's check the initial status of `mongod`.
-```bash
-systemctl status mongod
-```
-![mongodb installation](/assets/images/201804310.png)
-
-{% include ads3.html %}
-
-For more usage of systemctl, please refer: [CentOS7 Systemctl Cheat Sheet](https://www.bulafish.com/centos/2018/04/27/centos7-systemctl-cheat-sheet/)
-
-Mongod is enabled initially.  If the service is not enabled, use command below to enable and start the service.
-```bash
-systemctl enable mongod
-systemctl start mongod
-```
-![mongodb installation](/assets/images/201804306.png)
-
-Check the version of mongod.
-```bash
-mongo -version
-```
-![mongodb installation](/assets/images/201804309.png)
-
-Locations related to Mongodb.
-1. `/etc/mongod.conf`; config file of mongod.
-2. `/var/log/mongodb/`; log file of mongod.
-3. `/var/lib/mongo/`; db path of mongod, all data files are store here.
-
-![mongodb installation](/assets/images/201804308.png)
-
-Connect to mongod.
+Let's use localhost exception to login mongod.
 ```bash
 mongo
 ```
-![mongodb installation](/assets/images/201804307.png)
+![mongodb authentication](/assets/images/2018043014.png)
 
-REFERENCES:
-<br>[
-Install MongoDB Community Edition on Red Hat Enterprise or CentOS Linux](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/#run-mongodb-community-edition)
+At login, mongodb prompts warnings suggesting for better configurations.  So let's fix it first.  Before we start, check the current status first.
+<br>![mongodb authentication](/assets/images/2018043015.png)
+
+Use the commands to fix the problem.  First two lines will change the current status, last two line will add the command to a script where it will be executed every time server reboots.  Please note that the following commands must be run by root privileges.
+```bash
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+echo "echo never > /sys/kernel/mm/transparent_hugepage/enabled" >> /etc/rc.d/rc.local
+echo "echo never > /sys/kernel/mm/transparent_hugepage/defrag" >> /etc/rc.d/rc.local
+```
+![mongodb authentication](/assets/images/2018043016.png)
+
+Restart mongod and login again, the warnings are gone.
+```bash
+systemctl restart mongod
+mongo
+```
+![mongodb authentication](/assets/images/2018043017.png)
+
+According to mongodb document, let's create our first user.
+```
+use admin
+db.createUser(
+  {
+    user: "blogadmin",
+    pwd: "12345678",
+    roles: [
+       { role: "userAdminAnyDatabase", db: "admin" },       
+    ]
+  }
+)
+```
+![mongodb authentication](/assets/images/2018043018.png)
+
+Now we have created the first user, let's enable the authentication mechanism by editing mongodb config file as below.
+<br>![mongodb authentication](/assets/images/2018043019.png)
+
+Save, exit and restart the service.
+```bash
+vim /etc/mongod.conf
+systemctl restart mongod
+```
+![mongodb authentication](/assets/images/2018043020.png)
+
+Now let's try login again by just using `mongo` and trying to list all dbs.
+<br>![mongodb authentication](/assets/images/2018043021.png)
+
+We can see that errmsg displays "not authorized on admin to execute command", that means our setting works.  Now let's use authorized user to login.  There are two ways to do so, one is using this syntax `mongo -u username -p --authenticationDatabase admin`.
+<br>![mongodb authentication](/assets/images/2018043022.png)
+
+Another way is to use [db.auth()](https://docs.mongodb.com/manual/reference/method/db.auth/#db.auth) function provided by mongodb.  To use it, we first login with `mongo`.
+<br>![mongodb authentication](/assets/images/2018043023.png)
+
+REFERENCES:  
+[Users &mdash; MongoDB Manual 3.6](https://docs.mongodb.com/manual/core/security-users/)  
+[Authentication &mdash; MongoDB Manual 3.6](https://docs.mongodb.com/manual/core/authentication/)
