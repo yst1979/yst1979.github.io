@@ -1,6 +1,6 @@
 ---
-title: MongoDB Enable Authentication
-description: Enable Mongodb-3.6 community edition Authentication.
+title: MongoDB Enable User Login Authentication
+description: Enable Mongodb-3.6 community edition user login authentication.
 categories:
  - CentOS
 tags:
