@@ -43,6 +43,8 @@ echo "echo never > /sys/kernel/mm/transparent_hugepage/defrag" >> /etc/rc.d/rc.l
 ```
 ![mongodb authentication](/assets/images/2018043016.png)
 
+{% include ads3.html %}
+
 Restart mongod and login again, the warnings are gone.
 ```bash
 systemctl restart mongod
