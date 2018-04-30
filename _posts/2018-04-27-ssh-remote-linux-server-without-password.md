@@ -32,7 +32,7 @@ Before we start, let's take a look of the initial state first.  It is crucial to
 ![ssh-keygen](/assets/images/2018042707.png)
 
 Now let's start generate the keys in `coffee` with command `ssh-keygen`.
-```
+```bash
 ssh-keygen -t rsa -b 4096
 ```
 ![ssh-keygen](/assets/images/2018042702.png)
@@ -64,7 +64,7 @@ Next we need to copy the public key, which is `id_rsa.pub`, to `tea`.  Many arti
 5. Paste the copied content into authorized_keys.
 
 Now all those troublesome steps can be simplified into just one command.
-```
+```bash
 ssh-copy-id user@destination-server-ip-or-name
 ```
 ![ssh-copy-id](/assets/images/2018042708.png)

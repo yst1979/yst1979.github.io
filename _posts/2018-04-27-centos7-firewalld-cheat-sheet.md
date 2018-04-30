@@ -27,13 +27,13 @@ There are nine default zones set by CentOS7, which are
 For more information about each zone, please refer: [Documentation - Zone - Predefined Zones \| firewalld](http://www.firewalld.org/documentation/zone/predefined-zones.html)
 
 As usual, we begin with `-h` and it will list out many many many many options!!
-```
+```bash
 firewall-cmd -h
 ```
 ![firewall-cmd](/assets/images/2018042710.png)
 
 Now it is important to know all the zones available in our server, the default zone and the zone it is using right now.
-```
+```bash
 firewall-cmd --get-zones
 firewall-cmd --get-default-zone
 firewall-cmd --get-active-zone
@@ -42,13 +42,13 @@ firewall-cmd --get-active-zone
 we can see that right now our server is using the zone `public`.
 
 Now list out all the predefined services.
-```
+```bash
 firewall-cmd --get-services
 ```
 ![firewall-cmd](/assets/images/2018042712.png)
 
 Check out current status of firewall rule.
-```
+```bash
 firewall-cmd --list-all
 ```
 ![firewall-cmd](/assets/images/2018042721.png)  
@@ -62,7 +62,7 @@ But from my source server, `coffee`, accessing to `blogdemo's` 80 port is failed
 {% include ads3.html %}
 
 Now add http service to `blogdemo's` firewall rule. `--zone=public` is not mandatory but it is also good to have command as specific as possible.
-```
+```bash
 firewall-cmd --add-service=http --zone=public
 ```
 ![firewall-cmd](/assets/images/2018042715.png)
@@ -71,19 +71,19 @@ Now try to access `blogdemo's` 80 port again from `coffee`.
 ![firewall-cmd](/assets/images/2018042716.png)
 
 Now if we reload firewalld, we will find that http is remove from service.  That's because when we add http service, it was loaded into the memory but when we reload it, it actually read all the configure from a file located at `/etc/firewalld/zones/public.xml`.  Which work just the same way as iptables.
-```
+```bash
 firewall-cmd --reload
 ```
 ![firewall-cmd](/assets/images/2018042717.png)
 
 Therefore if we want to add a service permanently, we append --permanent at the end of the command and the change is write into the .xml file directly, then we have to reload the service right away so the changes will take effect from .xml file into memory.  Steps are demonstrates at the image below.
-```
+```bash
 firewall-cmd --add-service=http --zone=public --permanent
 ```
 ![firewall-cmd](/assets/images/2018042718.png)
 
 Next we are going to add particular ip with particular service to the rule AND particular ip to all services.  For achieving this, we use `--add-rich-rule`.  Do not forget to reload so the rules will take effect.  For checking rich rules, we can use `--list-rich-rules`.
-```
+```bash
 firewall-cmd --add-source=192.168.122.1/32 --zone=public --permanent
 firewall-cmd --add-rich-rule='rule family=ipv4 source address=192.168.122.0/24 service name=ssh accept' --permanent
 firewall-cmd --list-rich-rules
@@ -91,7 +91,7 @@ firewall-cmd --list-rich-rules
 ![firewall-cmd](/assets/images/2018042719.png)
 
 For removing rules, just simply change `add` to `remove`.  Again, don't forget to reload.
-```
+```bash
 firewall-cmd --remove-service=http --zone=public
 firewall-cmd --remove-source=192.168.122.1/32 --zone=public --permanent
 firewall-cmd --remove-rich-rule='rule family=ipv4 source address=192.168.122.0/24 service name=ssh accept' --permanent
