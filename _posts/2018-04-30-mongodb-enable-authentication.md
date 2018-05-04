@@ -7,7 +7,8 @@ tags:
  - Mongodb
 ---
 
-In the previous post, I have installed Mongodb-3.6 Community Edition, please refer here: [MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/).  
+In the previous post, I have installed Mongodb-3.6 Community Edition, please refer here:  
+[MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/).  
 By default, mongodb starts with no authentication required, meaning that anyone can login to your mongodb.  Therefore in this post, I am going to write about how to add user rights and enable authentication.
 
 Firs of all, make sure mongod is running.
