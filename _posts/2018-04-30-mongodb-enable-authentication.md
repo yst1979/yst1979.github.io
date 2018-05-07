@@ -68,7 +68,10 @@ db.createUser(
 ```
 ![mongodb authentication](/assets/images/2018043018.png)
 
-Now we have created the first user, let's enable the authentication mechanism by editing mongodb config file as below.
+Now we have created the first user, we can use the same routine to create users for operation needed.  For testing purpose, I am just going to create a `root` user whom has the full privileges to the db.
+![mongodb authentication](/assets/images/2018050702.png)
+
+Now let's enable the authentication mechanism by editing mongodb config file as below.
 <br>![mongodb authentication](/assets/images/2018043019.png)
 
 Save, exit and restart the service.
