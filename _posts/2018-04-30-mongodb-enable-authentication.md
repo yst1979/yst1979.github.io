@@ -69,6 +69,18 @@ db.createUser(
 ![mongodb authentication](/assets/images/2018043018.png)
 
 Now we have created the first user, we can use the same routine to create users for operation needed.  For testing purpose, I am just going to create a `root` user whom has the full privileges to the db.
+```
+use admin
+db.createUser(
+  {
+    user: "blogroot",
+    pwd: "12345678",
+    roles: [
+       { role: "root", db: "admin" },       
+    ]
+  }
+)
+```
 ![mongodb authentication](/assets/images/2018050702.png)
 
 Now let's enable the authentication mechanism by editing mongodb config file as below.
