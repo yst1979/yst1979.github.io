@@ -102,6 +102,10 @@ We can see that errmsg displays "not authorized on admin to execute command", th
 Another way is to use [db.auth()](https://docs.mongodb.com/manual/reference/method/db.auth/#db.auth) function provided by mongodb.  To use it, we first login with `mongo`.
 <br>![mongodb authentication](/assets/images/2018043023.png)
 
+RELATED POSTS:  
+[MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/)  
+[Setup MongoDB Replication With Arbiter Environment](https://www.bulafish.com/centos/2018/04/30/setup-mongodb-replication-with-arbiter-environment/)
+
 REFERENCES:  
 [Users &mdash; MongoDB Manual 3.6](https://docs.mongodb.com/manual/core/security-users/)  
 [Authentication &mdash; MongoDB Manual 3.6](https://docs.mongodb.com/manual/core/authentication/)

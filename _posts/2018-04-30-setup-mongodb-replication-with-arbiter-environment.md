@@ -121,6 +121,10 @@ Check the status after arbiter has been added.
 
 That's it, we have deployed an replica set environment with an arbiter!
 
+REPLATED POSTS:  
+[MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/)  
+[MongoDB Enable User Login Authentication](https://www.bulafish.com/centos/2018/04/30/mongodb-enable-authentication/)
+
 REFERENCES:  
 [Deploy a Replica Set](https://docs.mongodb.com/manual/tutorial/deploy-replica-set/)  
 [MongoDB Replica Set 高可用性架構搭建](https://blog.toright.com/posts/4508/mongodb-replica-set-%E9%AB%98%E5%8F%AF%E7%94%A8%E6%80%A7%E6%9E%B6%E6%A7%8B%E6%90%AD%E5%BB%BA.html)
