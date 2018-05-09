@@ -17,10 +17,8 @@ In this post, for simplicity, I am going to setup a mongodb replica set environm
 [Arbiter](https://docs.mongodb.com/manual/core/replica-set-arbiter/) is a special role in this environment, it does not maintain any data but to maintain a quorum in a replica set by responding to hearteat and election rquests by other replica set members.
 
 Steps for this tutorial,
-1. Prepare three servers with mongodb installed.  Make sure each server is able to coonect to every other servers through 27017 port.  Please refer:  
-[MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/)
-2. Create necessary users and enable authentication.  Please refer:  
-[MongoDB Enable User Login Authentication](https://www.bulafish.com/centos/2018/04/30/mongodb-enable-authentication/)
+1. Prepare three servers with mongodb installed.  Make sure each server is able to coonect to every other servers through 27017 port.  Please refer: [MongoDB-3.6 Community Edition Installation](https://www.bulafish.com/centos/2018/04/30/mongodb-community-edition-installation/)
+2. Create necessary users and enable authentication.  Please refer: [MongoDB Enable User Login Authentication](https://www.bulafish.com/centos/2018/04/30/mongodb-enable-authentication/)
 3. Create [Keyfile Security](https://docs.mongodb.com/manual/tutorial/enforce-keyfile-access-control-in-existing-replica-set/#keyfile-security) for replica set internal authentication access control.
 4. Modify `/etc/mongod.conf` to the use of replication set.
 5. Configure and start replica set service, check result.
