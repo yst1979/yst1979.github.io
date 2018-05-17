@@ -8,8 +8,8 @@ tags:
 ---
 
 I had needs to confirm certain files or directories are installed from which packages, this is the way to do it and solve my problem.
-
 To extract the files from rpm packages, we need to download it first, please refer here:
+[Download rpm packages from repository on CentOS7](https://www.bulafish.com/centos/2018/05/17/download-rpm-packages-from-repository/)
 
 Once you have th rpm file, use this command to extract files from rpm package to your local hdd.
 
