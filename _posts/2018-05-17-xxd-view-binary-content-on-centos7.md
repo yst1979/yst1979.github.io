@@ -7,11 +7,11 @@ tags:
  - Tools
 ---
 
-OK, I have two server, one install php from `webtatic` repository with package `php56w-cli`.  The `include_path` value is marked inside php.ini file and phpinfo() show me include_path with value of `/usr/share/php` which is exactly what I need.
+OK, I have two server, one install php from [webtatic](https://webtatic.com/projects/yum-repository/) repository with package `php56w-cli`.  The `include_path` value is marked inside php.ini file and phpinfo() show me include_path with value of `/usr/share/php` which is exactly what I need.
 
-Another, install php from `centos-sclo-rh` repository with package `rh-php56-php-cli`.  The `include_path` value is also marked inside php.ini file but phpinfo() show me include_path with value of `/opt/rh/rh-php56/root/usr/share/php` which is not what I want and is causing trouble of my program.
+Another, install php from [centos-sclo-rh](https://wiki.centos.org/AdditionalResources/Repositories/SCL) repository with package `rh-php56-php-cli`.  The `include_path` value is also marked inside php.ini file but phpinfo() show me include_path with value of `/opt/rh/rh-php56/root/usr/share/php` which is not what I want and is causing trouble of my program.
 
-I solved this problem by setting value `/usr/share/php` to varialbe `include_path` inside php.ini but I was satisfy enough.  I want to know why this problem happend, how it happened.  So after a long search, I found the cause.  It is written hard coded in the php binary file.  So I guess the logic is used the hard coded value `/opt/rh/rh-php56/root/usr/share/php` for variable `include_path` IF noting is configured inside php.ini file.
+I solved this problem by setting value `/usr/share/php` to variable `include_path` inside php.ini but I was satisfy enough.  I want to know why this problem happend, how it happened.  So after a long search, I found the cause.  It is written hard coded in the php binary file.  So I guess the logic is used the hard coded value `/opt/rh/rh-php56/root/usr/share/php` for variable `include_path` IF noting is configured inside php.ini file.
 
 {% include ads3.html %}
 
