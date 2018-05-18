@@ -2,7 +2,7 @@
 title: MongoDB-3.6 Community Edition Installation
 description: Mongodb-3.6 community edition installation with yum on CentOS7.
 categories:
- - CentOS
+ - DB
 tags:
  - Mongodb
 ---

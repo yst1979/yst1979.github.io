@@ -2,7 +2,7 @@
 title: Setup MongoDB Replication With Arbiter Environment
 description: Setup Mongodb-3.6 community edition with replication.
 categories:
- - CentOS
+ - DB
 tags:
  - Mongodb
 ---

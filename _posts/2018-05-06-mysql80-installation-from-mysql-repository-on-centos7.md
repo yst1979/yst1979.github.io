@@ -2,7 +2,7 @@
 title: MySQL80 Installation From MySQL Repository On CentOS7
 description: MySQL has recently announced the release of MySQL80 and it seems like the performance has been improved drastically, so let's install MySQL80 from official repository.
 categories:
- - CentOS
+ - DB
 tags:
  - MySQL
 ---
