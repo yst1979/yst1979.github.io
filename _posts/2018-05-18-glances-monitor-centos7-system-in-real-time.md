@@ -23,4 +23,5 @@ curl -L https://bit.ly/glances | /bin/bash
 ```
 ![glances](/assets/images/2018051801.png)
 
-Finally, hit `glances` at your command line and that's it, enjoy!
+Finally, enter `glances` at your command line and that's it, enjoy!  You can hit `h` to show more controls.  
+![glances](/assets/images/2018051804.png)
