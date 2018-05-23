@@ -100,7 +100,7 @@ goaccess /var/log/nginx/demo.bulafish.com.access.log -o /usr/share/nginx/html/re
 That's it, if everyting works right, you will see your real time statistics in html when you browse to your website.  
 ![goaccess](/assets/images/2018052321.png)
 
-It is not a good idea to have your real time statistics data expose to internet so I am going to add an account password verification.  Use `htpasswd` to generate your account and password.  This command is provided by the httpd-tools package.
+It is not a good idea to have your real time statistics data expose to internet so I am going to add an account password verification.  Use `htpasswd` to generate your account and password.  This command is provided by the `httpd-tools` package.
 ```bash
 yum install httpd-tools
 ```
