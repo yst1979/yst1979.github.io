@@ -82,7 +82,7 @@ There are many ways to use goacces, please refer to [examples](https://goaccess.
 1. define the date, time and log format.  
 ![goaccess](/assets/images/2018052308.png)  
 ![goaccess](/assets/images/2018052309.png)  
-![goaccess](/assets/images/20180523010.png)
+![goaccess](/assets/images/2018052310.png)
 2. let goaccess run as daemon.  
 ![goaccess](/assets/images/2018052311.png)
 3. output real time result in html form  
