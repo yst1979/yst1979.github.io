@@ -81,14 +81,14 @@ goaccess -V
 There are many ways to use goacces, please refer to [examples](https://goaccess.io/man#examples).  Next I will record the way I use it.  In order to save some typing, modify goaccess config file at `/usr/local/etc/goaccess.conf` as the image below, which will achieve
 1. define the date, time and log format.  
 ![goaccess](/assets/images/2018052308.png)  
-![goaccess](/assets/images/2018052309.png)  
+![goaccess](/assets/images/2018052309.png)
 ![goaccess](/assets/images/2018052310.png)
 2. let goaccess run as daemon.  
 ![goaccess](/assets/images/2018052311.png)
 3. output real time result in html form  
 ![goaccess](/assets/images/2018052312.png)
 4. config ssl key-pairs and enable goaccess to run https  
-![goaccess](/assets/images/2018052313.png)  
+![goaccess](/assets/images/2018052313.png)
 ![goaccess](/assets/images/2018052314.png)
 
 You can set the `input` and `output` source as well at line 323 and 385 but I am going to leave these 2 blank.  Save changes and exit, use  command below to start goaccess, where the first part is your input file, with `-o` follow by output file, make sure output file is located at a place where it is internet accessible.
