@@ -5,6 +5,7 @@ categories:
  - CentOS
 tags:
  - Nginx
+ - SSL
 ---
 
 Since google starts promoting SSL, SSL has become commonly use nowadays and because of this, many companies start to provide free ssl, which [Let's Encrypt](https://letsencrypt.org/) is one of the earliest free ssl service provider.  Let's Encrypt provides a bot called [certbot](https://certbot.eff.org/) which much ease the process of applying, configuring, renewing and maintaining the SSLs compare to the early times.  In this post, I am going to show you how to use certbot to apply and set renew for the free ssl certificate with nginx.
@@ -32,7 +33,7 @@ certbot --nginx
 
 To obtain ssl only, make sure your http(80) port is public accessible.
 ```bash
-certbot --nginx certonly
+certbot --nginx certonly --rsa-key-size 4096
 ```
 ![letsencrypt](/assets/images/2018052113.png)  
 ![letsencrypt](/assets/images/2018052114.png)
@@ -48,7 +49,7 @@ listen 80;
 listen 443 ssl;
 server_name  demo.bulafish.com;
 
-ssl_certificate     /etc/letsencrypt/live/demo.bulafish.com/cert.pem;
+ssl_certificate     /etc/letsencrypt/live/demo.bulafish.com/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/demo.bulafish.com/privkey.pem;
 ```
 ![letsencrypt](/assets/images/2018052121.png)
