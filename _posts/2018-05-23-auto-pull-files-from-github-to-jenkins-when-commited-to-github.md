@@ -76,3 +76,6 @@ After build, click on Workspace to confirm jenkins has pull the updated file fro
 ![jenkins](/assets/images/2018052348.png)  
 ![jenkins](/assets/images/2018052349.png)  
 ![jenkins](/assets/images/2018052350.png)
+
+Next:  
+[Files Update to Server Through Jenkins with SSH ](https://www.bulafish.com/devops/2018/05/24/files-update-to-server-through-jenkins-with-ssh/)

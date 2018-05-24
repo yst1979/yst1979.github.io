@@ -44,7 +44,7 @@ Destiny server is done configuring at this moment, next we configure destiny ser
 ![jenkins](/assets/images/2018052409.png)  
 ![jenkins](/assets/images/2018052410.png)  
 ![jenkins](/assets/images/2018052411.png)  
-Choose the destiny server for project, only one destiny server is shown in the `Name` list cause only one server is built.  \**/* for `Source files` meaning all files.  `Remote directory` is the directory on destiny server where you want to codes to be put from jenkins server.  
+Choose the destiny server for project, only one destiny server is shown in the `Name` list cause only one server is built.  \***/*\* for `Source files` meaning all files.  `Remote directory` is the directory on destiny server where you want to codes to be put from jenkins server.  
 ![jenkins](/assets/images/2018052419.png)  
 
 All settings are done now, take a look at the `/tmp/` of destiny server.  
