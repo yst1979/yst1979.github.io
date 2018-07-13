@@ -23,14 +23,14 @@ tags:
  - dirty pages means 儲存在 page cache 的資料但需要寫入 storage (hdd, NAS 等)
  - 測試
   - dd if=/dev/zero of=testfile.txt bs=1M count=10
-  - cat /proc/meminfo | grep Dirty, Drity 數字會增加約 10240 KB
+  - cat /proc/meminfo \| grep Dirty, Drity 數字會增加約 10240 KB
   - 執行 sync 後數字會立即降低, 代表 page cache 資料已回寫到 hdd
   - 系統也會透過 [flush](https://stackoverflow.com/questions/25859996/what-does-flush-2530-in-iotop-file-on-rhel) 自動將 dirty pages 寫入 hdd
 
 [flush](https://stackoverflow.com/questions/25859996/what-does-flush-2530-in-iotop-file-on-rhel)
  - kernel process flushes dirty pages from page cache to storage (hdd, NAS 等)
  - On CentOS 6, [try](https://serverfault.com/questions/500833/what-is-causing-these-flush-processes)
-  - ps aux | grep flush ; [flush-253:0]
+  - ps aux \| grep flush ; [flush-253:0]
   - grep ^ /sys/class/block/\*/dev
   - compare both results
   - extra [reading](https://lwn.net/Articles/326552/)
