@@ -17,6 +17,8 @@ CI：
    - Code coverage type testing
  - Feed back quality of code
 
+{% include ads3.html %}
+
 CD：
  - Provision (optional)
    - QA test environment
