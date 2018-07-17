@@ -22,18 +22,18 @@ tags:
  - 當寫入資料時, 會先寫入 page cache, 然後當作 dirty pages
  - Dirty pages means 儲存在 page cache 的資料但需要寫入 storage (hdd, NAS 等)
  - 測試
-  - dd if=/dev/zero of=testfile.txt bs=1M count=10
-  - cat /proc/meminfo \| grep Dirty, Drity 數字會增加約 10240 KB
-  - 執行 sync 後數字會立即降低, 代表 page cache 資料已回寫到 hdd
-  - 系統也會透過 [flush](https://stackoverflow.com/questions/25859996/what-does-flush-2530-in-iotop-file-on-rhel) 自動將 dirty pages 寫入 hdd
+   - dd if=/dev/zero of=testfile.txt bs=1M count=10
+   - cat /proc/meminfo \| grep Dirty, Drity 數字會增加約 10240 KB
+   - 執行 sync 後數字會立即降低, 代表 page cache 資料已回寫到 hdd
+   - 系統也會透過 [flush](https://stackoverflow.com/questions/25859996/what-does-flush-2530-in-iotop-file-on-rhel) 自動將 dirty pages 寫入 hdd
 
 [Flush](https://stackoverflow.com/questions/25859996/what-does-flush-2530-in-iotop-file-on-rhel)
  - Kernel process flushes dirty pages from page cache to storage (hdd, NAS 等)
  - On CentOS 6, [try](https://serverfault.com/questions/500833/what-is-causing-these-flush-processes)
-  - ps aux \| grep flush ; [flush-253:0]
-  - grep ^ /sys/class/block/\*/dev
-  - Compare both results
-  - Extra [reading](https://lwn.net/Articles/326552/)
+   - ps aux \| grep flush ; [flush-253:0]
+   - grep ^ /sys/class/block/\*/dev
+   - Compare both results
+   - Extra [reading](https://lwn.net/Articles/326552/)
 
 [TLB-translation lookaside buffer](https://en.wikipedia.org/wiki/Translation_lookaside_buffer)
  - Memory cache used to reduce the time taken to access a user memory location ( page table in main memory)
@@ -50,6 +50,8 @@ tags:
  [reading](https://www.cnblogs.com/pengdonglin137/p/3362274.html),
  [reading](https://www.geeksforgeeks.org/whats-difference-between-cpu-cache-and-tlb/)
 
+{% include ads3.html %}
+
 [Paging](http://mropengate.blogspot.com/2015/01/operating-system-ch8-memory-management.html?m=1)：
  - Physical memory break down to frame,  pfn is physical frame number
 
@@ -63,8 +65,8 @@ Paging daemon：
  - Background process
  - Responsible to maintain a pool of free clean page frames
  - Checks if at least 20% of frames are free every 250ms (/proc/sys/vm/dirty_ratio)
-  - Select pages to evict using the replacement algorithm
-  - Schedule disk writes for dirty pages (flush process?)
+   - Select pages to evict using the replacement algorithm
+   - Schedule disk writes for dirty pages (flush process?)
 
 Swapper：
  - When paging daemon is not keeping up with the demand for free pages on the system
@@ -92,10 +94,10 @@ Invert page table：
 
 Multi-level paging：
  - Linux uses three-level page tables
-  - Global directory
-  - Page middle directory
-  - Page table
-  - Page
+   - Global directory
+   - Page middle directory
+   - Page table
+   - Page
 
 MMU-momery management unit：
  - The job of MMU is to translate page number to (page)frame number
