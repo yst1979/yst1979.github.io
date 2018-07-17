@@ -12,20 +12,20 @@ CI/CD focus on the `automation of steps` to release application
 CI：
  - Build
  - Test, code analysis
-  - Unit testing
-  - Linting
-  - Code coverage type testing
+   - Unit testing
+   - Linting
+   - Code coverage type testing
  - Feed back quality of code
 
 CD：
  - Provision (optional)
-  - QA test environment
-  - Stage environment  
+   - QA test environment
+   - Stage environment  
  - Deploying application
-  - Specific version
-  - Configured & installed on provisioned Environment  
+   - Specific version
+   - Configured & installed on provisioned Environment  
  - Acceptance test
-  - Sanity tests
+   - Sanity tests
 
 Deployment：
  - Deploying application to production environment
