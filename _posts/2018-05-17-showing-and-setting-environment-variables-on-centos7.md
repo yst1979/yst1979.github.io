@@ -19,7 +19,7 @@ To show particular environment value, for example `PATH`,
 ```bash
 echo $PATH
 ```
-![env](/assets/images/20180517112.png)
+![env](/assets/images/2018051712.png)
 
 {% include ads3.html %}
 
@@ -28,10 +28,10 @@ To set a custom environment value, for example `bulafish=hi` and verify,
 export bulafish=hi
 echo $bulafish
 ```
-![env](/assets/images/20180517113.png)
+![env](/assets/images/2018051713.png)
 
 The value is only validate for the current ssh session by using the command above.  If you want to set the value permanently, modify `/etc/environment`, after that, you must logout the current ssh connection and re-login again to make the change take effect.  
-![env](/assets/images/20180517114.png)
+![env](/assets/images/2018051714.png)
 
 REFERENCES:  
 [https://tw.godaddy.com/help/centos-12295](https://tw.godaddy.com/help/centos-12295)  
