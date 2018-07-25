@@ -76,8 +76,8 @@ mongo
 ![mongodb installation](/assets/images/2018043007.png)
 
 REPLATED POSTS:  
-[MongoDB Enable User Login Authentication](https://www.bulafish.com/centos/2018/04/30/mongodb-enable-authentication/)  
-[Setup MongoDB Replication With Arbiter Environment](https://www.bulafish.com/centos/2018/04/30/setup-mongodb-replication-with-arbiter-environment/)
+[MongoDB Enable User Login Authentication](https://www.bulafish.com/db/2018/04/30/mongodb-enable-authentication/)  
+[Setup MongoDB Replication With Arbiter Environment](https://www.bulafish.com/db/2018/04/30/setup-mongodb-replication-with-arbiter-environment/)
 
 REFERENCES:
 <br>[
