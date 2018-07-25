@@ -35,7 +35,7 @@ mongo
 At login, mongodb prompts warnings suggesting for better configurations.  So let's fix it first.  Before we start, check the current status first.
 <br>![mongodb authentication](/assets/images/2018043015.png)
 
-Use the commands to fix the problem.  First two lines will change the current status, last two line will add the command to a script where it will be executed every time server reboots.  Please note that the following commands must be run by root privileges.
+Use the commands to fix the problem.  First two lines will change the current status, last two line will add the command to a script where it will be executed every time server reboots.  Please note that the following commands must be run by root privileges.  Please run `chmod +x /etc/rc.d/rc.local` to enable rc.local.
 ```bash
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 echo never > /sys/kernel/mm/transparent_hugepage/defrag
