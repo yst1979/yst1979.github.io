@@ -1,10 +1,11 @@
 ---
-title: Self Learning Part4
-description: Self learning part4.
+title: AWS Self Learning Part4
+description: AWS self learning part4.
 categories:
  - Self learning
 tags:
  - Study Note
+ - AWS
 ---
 
 1. Pillars of well-architected framework

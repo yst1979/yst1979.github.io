@@ -9,8 +9,9 @@ tags:
 ---
 
 # Cloud Concepts Overview
-### What is cloud computing
 
+
+### What is cloud computing
 1. Cloud service
   * fully management service
   * via internet
@@ -56,9 +57,9 @@ Global reach on demand|Limited geographic regions
   * Elasticity (彈性)
     * Ability to grow but to reduce in size when necessary
 
-### Six benefits of cloud computing
 
-6. Advantages
+### Six benefits of cloud computing
+1. Advantages
   * Trade Capital Expense for Variable Expense
   * Benefit from massive economies of scale, for lower usage price
   * Eliminate predicting capacity
@@ -66,9 +67,9 @@ Global reach on demand|Limited geographic regions
   * Stop spending money running and maintaining data centers  
   * Go global in minutes
 
-### What is AWS
 
-7. What is web service?
+### What is AWS
+1. What is web service?
   * Software available over internet
   * Use standardized format (XML or JSON) for request and response
   * An API interaction
@@ -76,21 +77,19 @@ Global reach on demand|Limited geographic regions
   * Is discoverable
 
 
-8. AWS by category
+2. AWS by category
   * Core services
     * Infrastructure services such as compute, networking, storage, applications, databases, and analytics
   * Foundational services
     * Cloud-based solutions for the analytics, enterprise, mobile, and IoT platforms
   * Developer and operation services
-    * Enable developers and IT operations
-professionals practicing DevOps to rapidly and safely deliver software
+    * Enable developers and IT operations professionals practicing DevOps to rapidly and safely deliver software
+
 
 ### AWS cloud adoption framework (CAF)
+1. Help organizations develop efficient and effective plans for cloud adoption
 
-9. Help organizations develop efficient and effective plans for cloud adoption
-
-
-10. Six core perspectives
+2. Six core perspectives
   * Business
   * People
   * Governance
@@ -98,9 +97,11 @@ professionals practicing DevOps to rapidly and safely deliver software
   * Security
   * Operations
 
-# Cloud Economics
-### Fundamentals of aws pricing
 
+# Cloud Economics
+
+
+### Fundamentals of aws pricing
 1. AWS fundamentals
   * Pay for
     * Compute, Storage, Data transfer out
@@ -119,22 +120,18 @@ professionals practicing DevOps to rapidly and safely deliver software
     * S3, EBS, EFS
   * Pay even less as AWS grows
   * Custom pricing is available
-    * For high-volume projects with unique
-requirements
+    * For high-volume projects with unique requirements
 
 
-3. Consolidated Billing
-  * consolidate payment for multiple AWS or AISPL accounts for combined usage for tiered benefits
+3. Consolidated billing
+  * Consolidate payment for multiple AWS or AISPL accounts for combined usage for tiered benefits
 
 
 ### Total cost of ownership
-
 1. What is TCO-Total cost of ownership
   * Total cost of an asset plus cost to operate it
-  * Total cost of purchasing and operating a technology product during its
-useful life
-  * `Financial estimate intended to help buyers and owners determine the direct
-and indirect costs of a product or system`
+  * Total cost of purchasing and operating a technology product during its useful life
+  * `Financial estimate intended to help buyers and owners determine the direct and indirect costs of a product or system`
 
 
 2. On premise VS On cloud
@@ -148,9 +145,7 @@ and indirect costs of a product or system`
     * Agility
     * Consumption based costs
 
-3. TCO is used for comparing the costs of running an entire
-infrastructure environment for a specific workload in an on-premises or co-location
-facility to the same workload running on a cloud-based infrastructure
+3. TCO is used for comparing the costs of running an entire infrastructure environment for a specific workload in an on-premises or co-location facility to the same workload running on a cloud-based infrastructure
 
 4. ROI analysis over cloud to premises
   * Hard benefits
@@ -166,9 +161,11 @@ facility to the same workload running on a cloud-based infrastructure
     * Agile business process able to quickly respond to new and emerging opportunities
     * Increase global reach
 
-# AWS Infrastructure
-### Global Infrastructure
 
+# AWS Infrastructure
+
+
+### Global Infrastructure
 1. Global infrastructure breaks into
   * Regions
   * Availability zones
