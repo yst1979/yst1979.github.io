@@ -8,6 +8,9 @@ tags:
  - AWS
 ---
 
+# Cloud Architecting
+
+### Well-Architected Framework
 1. Pillars of well-architected framework
   * Operational Excellence
   * Security
@@ -90,7 +93,7 @@ tags:
 10. Cost Optimization
   * Avoid or eliminate unneeded cost
   * Suboptimal resources
-  * For Keys
+  * For elements
     * Use cost-effective resources
       * Use appropriate services, resources and configuration
     * Match supply with demand
@@ -108,7 +111,8 @@ tags:
   * Use managed services
 
 
-12. Well-Architected Design Principles
+### Well-Architected Design Principles
+1. Well-Architected Design Principles
   * Stop guessing your capacity needs
     * Scale up/down or in/out automatically
   * Test systems at production scale
@@ -120,7 +124,7 @@ tags:
   * Improve through game days
 
 
-13. Reliability (可靠性)
+2. Reliability (可靠性)
   * Measure of how long a resource performs its intended function
   * Probability that `entire system` function for a specified period of time
   * A measure of how long the item performs its intended function
@@ -129,7 +133,7 @@ tags:
     * Failure Rate - Number of failures / total time in service
 
 
-14. Availability (可用性)
+3. Availability (可用性)
   * Percentage of time resources are operating normally
   * Normal operation time / total time
   * Measure of the percentage of time the resources are in an operable state
@@ -137,7 +141,7 @@ tags:
   * Improving availability usually leads to increased cost
 
 
-15. High Availability Factors
+4. High Availability Factors
   * Fault tolerance (容錯性)
     * Build-in redundancy
   * Recoverability
@@ -146,7 +150,7 @@ tags:
     * Ability to accommodate growth, part of application's availability
 
 
-16. HA on AWS
+5. HA on AWS
   * Multiple servers
   * Isolated, redundant data centers within each Availability Zone
   * Multiple Availability Zones within each Region
@@ -154,7 +158,7 @@ tags:
   * Fault tolerant services to use as you please
 
 
-17. Benefits of cloud over data center
+6. Benefits of cloud over data center
   * Trade capital expense for variable expense -> Stop buying hardware.
   * Benefit from massive economies of scale -> Benefit from Amazon’s purchasing
   power.
