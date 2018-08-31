@@ -48,6 +48,9 @@ tags:
   * HTTPS query API with credentials
 
 
+{% include ads3.html %}
+
+
 ### Billing and Cost Management
 1. Introduction
   * Is a service used to pay bill, monitor usage and budget costs

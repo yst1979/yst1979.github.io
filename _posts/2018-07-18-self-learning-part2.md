@@ -139,6 +139,9 @@ tags:
   * Forecast how much are likely to spend for the next three months
 
 
+{% include ads3.html %}
+
+
 ### Introduction to lambda
 1. Lambda
   * Full managed and scales automatically service
@@ -179,6 +182,8 @@ tags:
 
 2. Persistent storage (non volatile storage)  
   * EBS (volume)
+    * 99.999 % availability, about 5 minutes down time per year
+    * Annual failure rate is about 0.1% to 0.2% (AFR)
     * Mountable, only to EC2 in same AZ
     * Block level storage
     * Auto replicate within its AZ
@@ -204,24 +209,37 @@ tags:
   * SSD
     * General purpose (GP2)
       * Max Size: 1GB ~ 16TB
-      * Max IOPS: 10,000
-      * Max Throughput: 160 Mib/s
+      * Max IOPS/Volume: 10,000
+      * Max Throughput/Volume: 160 Mib/s
+      * Max IOPS/Instance: 80,000
+      * Max Throughput/Instance: 1,750MB/s      
+      * Performance Attribute: IOPS
     * Provisioned IOPS (IO1)
       * Max Size: 4GB ~ 16TB
-      * Max IOPS: 32,000
-      * Max Throughput: 500 Mib/s
+      * Max IOPS/Volume: 32,000
+      * Max Throughput/Volume: 500 Mib/s
+      * Max IOPS/Instance: 80,000
+      * Max Throughput/Instance: 1,750MB/s      
+      * Performance Attribute: IOPS
   * HDD
     * Throughput-Opt (ST1)
       * Max Size: 500GB ~ 16TB
-      * Max IOPS: 500
-      * Max Throughput: 500 Mib/s
+      * Max IOPS/Volume: 500
+      * Max Throughput/Volume: 500 Mib/s
+      * Max IOPS/Instance: 80,000
+      * Max Throughput/Instance: 1,750MB/s      
+      * Performance Attribute: MB/s
     * cold (SC1)
       * Max Size: 500GB ~ 16TB
       * Max IOPS: 250
       * Max Throughput: 250 Mib/s
+      * Max IOPS/Instance: 80,000
+      * Max Throughput/Instance: 1,750MB/s      
+      * Performance Attribute: MB/s
 
 
 5. EBS volume types - use case
+  * Encrypted volume can only be attached to instance support types
   * SSD
     * General purpose
       * Recommended for most workloads
@@ -247,13 +265,17 @@ tags:
 
 
 6. Snapshot
+  * Incremental backups
   * Point in time
   * Encrypted (volume) at no cost
   * Copy or share between regions
   * Image stored at S3, charge at per GB per month
   * Snapshot transfer to S3 cost money?
   * Volume size or used data size store in S3?
-
+    * Only used data size is store in S3
+  * Only pay for incremental pieces, not the full storage
+  * Data is `lazily loaded` in the background to volume when creating from snapshot
+    * Meaning volume is available right away but data is put into volume from snapshot at S3 when needed
 
 7. EBS charges
   * By the amount provisioned per month

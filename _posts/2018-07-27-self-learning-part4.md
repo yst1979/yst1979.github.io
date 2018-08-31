@@ -71,6 +71,9 @@ tags:
   * Manage changes in automation
 
 
+{% include ads3.html %}
+
+
 8. Performances Efficiency
   * Use computing resources efficiently to meet system requirements
   * Maintain that efficiency as demand changes and technologies evolve

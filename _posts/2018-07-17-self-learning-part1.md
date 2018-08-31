@@ -58,6 +58,9 @@ Global reach on demand|Limited geographic regions
     * Ability to grow but to reduce in size when necessary
 
 
+{% include ads3.html %}
+
+
 ### Six benefits of cloud computing
 1. Advantages
   * Trade Capital Expense for Variable Expense

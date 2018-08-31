@@ -154,6 +154,9 @@ tags:
     * Inline policies, no managed resource-based policies
 
 
+{% include ads3.html %}
+
+
 ### Trusted Advisor
 1. Help to reduce cost, increase performance,and improve security by optimizing your AWS environment
   * Cost optimization
