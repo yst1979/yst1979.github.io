@@ -88,5 +88,5 @@ Steps to create EFS from console and mount EFS in EC2, main focus will be on EFS
   ![efs](/assets/images/2018083121.png)
 
 
-### Finished view of resting command  
+### Finished view of testing command  
   ![efs](/assets/images/2018083123.png)
