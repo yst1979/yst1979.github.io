@@ -25,7 +25,7 @@ Steps to create auto scaling (A.S), two main concepts
 1. Select AMI
 2. Select instance type
 3. Configure details  
-![auto scaling](/assets/images/2018090602.png)<br><br>
+![auto scaling](/assets/images/2018090602.png)<br>
 4. Select storage
 5. Select security group (S.G)
 6. Select pem
@@ -35,14 +35,14 @@ Steps to create auto scaling (A.S), two main concepts
 
 ### Create A.S Group
 1. Select the source configuration for A.S group  
-![auto scaling](/assets/images/2018090604.png)<br><br>
+![auto scaling](/assets/images/2018090604.png)<br>
 2. Configure details  
 ![auto scaling](/assets/images/2018090605.png)
-![auto scaling](/assets/images/2018090606.png)<br><br>
+![auto scaling](/assets/images/2018090606.png)<br>
 3. Configure scaling policies, which can be set here or later  
-![auto scaling](/assets/images/2018090607.png)<br><br>
+![auto scaling](/assets/images/2018090607.png)<br>
 4. Configure notification here or later    
-![auto scaling](/assets/images/2018090608.png)<br><br>
+![auto scaling](/assets/images/2018090608.png)<br>
 5. Configure tags which will auto tag instance when scaling out  
 ![auto scaling](/assets/images/2018090609.png)
 
@@ -114,10 +114,10 @@ Go back to `Scaling Policies` under A.S, the `Execute policy when` section has t
 ### A.S Testing
 1. Increase instance CPU loading  
 ![auto scaling](/assets/images/2018090627.png)  
-![auto scaling](/assets/images/2018090628.png)<br><br>
+![auto scaling](/assets/images/2018090628.png)<br>
 2. A.S responds to high CPU loading  
-![auto scaling](/assets/images/2018090626.png)<br><br>
+![auto scaling](/assets/images/2018090626.png)<br>
 3. Checking C.W.  highCPU alarm is triggered so it executes the `scaling policy` set in A.S group  
-![auto scaling](/assets/images/2018090629.png)<br><br>
+![auto scaling](/assets/images/2018090629.png)<br>
 4. Checking scaling policy in A.S.  
 ![auto scaling](/assets/images/2018090630.png)
