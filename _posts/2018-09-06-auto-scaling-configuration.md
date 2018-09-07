@@ -25,7 +25,7 @@ Steps to create auto scaling (A.S), two main concepts
 1. Select AMI
 2. Select instance type
 3. Configure details  
-![auto scaling](/assets/images/2018090602.png)
+![auto scaling](/assets/images/2018090602.png)<br><br>
 4. Select storage
 5. Select security group (S.G)
 6. Select pem
@@ -35,14 +35,14 @@ Steps to create auto scaling (A.S), two main concepts
 
 ### Create A.S Group
 1. Select the source configuration for A.S group  
-![auto scaling](/assets/images/2018090604.png)
+![auto scaling](/assets/images/2018090604.png)<br><br>
 2. Configure details  
-![auto scaling](/assets/images/2018090605.png)  
-![auto scaling](/assets/images/2018090606.png)
+![auto scaling](/assets/images/2018090605.png)
+![auto scaling](/assets/images/2018090606.png)<br><br>
 3. Configure scaling policies, which can be set here or later  
-![auto scaling](/assets/images/2018090607.png)
+![auto scaling](/assets/images/2018090607.png)<br><br>
 4. Configure notification here or later    
-![auto scaling](/assets/images/2018090608.png)
+![auto scaling](/assets/images/2018090608.png)<br><br>
 5. Configure tags which will auto tag instance when scaling out  
 ![auto scaling](/assets/images/2018090609.png)
 
@@ -57,7 +57,7 @@ Clink `Instance` tag to view instances and its condition under this A.S
 Confirm the instance status by checking the EC2 service main section  
 ![auto scaling](/assets/images/2018090612.png)
 
-Check A.S Activity History to understand what A.S has done  
+Check A.S `Activity History` to understand what A.S has done  
 ![auto scaling](/assets/images/2018090613.png)
 
 {% include ads3.html %}
@@ -67,19 +67,19 @@ Check A.S Activity History to understand what A.S has done
 Click `Add policy` under` Scaling Policies` tag, click `Create simple scaling` policy  
 ![auto scaling](/assets/images/2018090614.png)
 
-Give a name and set the `action`, which is to add an instance.  
+Give a name and set `take the action`, which is to add an instance.  
 Condition, `Execute policy when`, can be set here but we will set it later elsewhere.  
 ![auto scaling](/assets/images/2018090615.png)
 
 Repeat the step to create an `action` to decrease an instance.  
 ![auto scaling](/assets/images/2018090616.png)
 
-Completed view of Scaling policies.  Notice that the `condition` has not been set yet, which we will do it elsewhere later.  
+Completed view of Scaling policies.  Notice that the `Execute policy when` has not been set yet, which we will do it elsewhere later.  
 ![auto scaling](/assets/images/2018090617.png)
 
 
 ### Create Alarm under CloudWatch (C.W)
-Create alarms under C.W to monitor certain condition of instances and trigger action created on steps above when condition is met.  
+Create alarms under C.W to monitor certain condition of instances and trigger action created on steps above when condition is met  
 ![auto scaling](/assets/images/2018090618.png)
 
 In this example we will monitor the metrics in A.S group  
@@ -89,9 +89,9 @@ Select the metric to monitor, in this case, CPUUtilization is selected
 ![auto scaling](/assets/images/2018090620.png)
 
 Set the condition to be triggered  
-`Whenever` section is the place to set the condition.  
-`Actions` section is the place to set what to do when condition is met.  In this case, we want to scale out when condition is met, so delete the default action which is SNS notification and click on` AutoScaling Action`.  
-`Period` is the time range frequency to be monitor.  
+`Whenever` section is the place to set the condition  
+`Actions` section is the place to set what to do when condition is met.  In this case, we want to scale out when condition is met, so delete the default action which is SNS notification and click on` AutoScaling Action`  
+`Period` is the time range to be monitor  
 ![auto scaling](/assets/images/2018090621.png)
 
 Completed view.  This configuration is saying
@@ -114,10 +114,10 @@ Go back to `Scaling Policies` under A.S, the `Execute policy when` section has t
 ### A.S Testing
 1. Increase instance CPU loading  
 ![auto scaling](/assets/images/2018090627.png)  
-![auto scaling](/assets/images/2018090628.png)  
+![auto scaling](/assets/images/2018090628.png)<br><br>
 2. A.S responds to high CPU loading  
-![auto scaling](/assets/images/2018090626.png)
+![auto scaling](/assets/images/2018090626.png)<br><br>
 3. Checking C.W.  highCPU alarm is triggered so it executes the `scaling policy` set in A.S group  
-![auto scaling](/assets/images/2018090629.png)  
+![auto scaling](/assets/images/2018090629.png)<br><br>
 4. Checking scaling policy in A.S.  
 ![auto scaling](/assets/images/2018090630.png)
