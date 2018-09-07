@@ -15,10 +15,8 @@ Steps to create auto scaling (A.S), two main concepts
   * `What` to scale out
   * Instance settings related
 2. Scaling groups
-  * `Where` to scale out
-    * VPC, subnet, LB etc
-  * `How many` and `what condition` to scale
-    * Scaling policies
+  * `Where` to scale out：VPC, subnet, LB etc
+  * `How many` and `what condition` to scale：Scaling policies
 
 
 ### Create A.S Configuration
