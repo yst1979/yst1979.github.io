@@ -3,4 +3,4 @@ layout: page
 type: about
 ---
 
-Building...
+Learn from internet, share to internet!
