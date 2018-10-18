@@ -4,7 +4,7 @@ description: Python Break.
 categories:
  - Python
 tags:
- - break
+ - Study Note
 ---
 
 What break does is it will break/stop the loop or code from continuing down when certain condition is met!  This is very important and helpful cause when in a loop, if code is not break when condition is met, the loop will just keep running till the end.  Which lead to waste of compute resource.  Where if a break is set, the loop will stop, so the remaining loops will not run, thus saving the compute resource.

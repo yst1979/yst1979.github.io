@@ -1,10 +1,11 @@
 ---
-title: Self Learning Part5
+title: AWS Self Learning Part5
 description: Self learning part5.
 categories:
  - Self learning
 tags:
  - Study Note
+ - AWS
 ---
 
 ### AWS Organization
