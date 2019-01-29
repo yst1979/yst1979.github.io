@@ -75,7 +75,7 @@ Now we have a new and clean jekyll theme of our choice!
 
 RELATED POSTS:
 <br>[Use Github Pages To Build Your Static Website](https://www.bulafish.com/sharings/2018/04/23/use-github-page-to-build-your-static-website/)
-<br>[Upload Jekyll Theme To Github Pages](https://www.bulafish.com/sharings/2018/04/23/use-github-page-to-build-your-static-website/)
+<br>[Upload Jekyll Theme To Github Pages](https://www.bulafish.com/sharings/centos/2018/04/24/upload-jekyll-theme-to-github-pages/)
 
 REFERENCES:
 <br>[RVM: Ruby Version Manager](https://rvm.io/)
