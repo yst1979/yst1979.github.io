@@ -20,6 +20,7 @@ When creating alarm, there are quit a few of action that we can actually choose 
 2. What action to perform when monitored condition is met
 3. The monitoring metric and threshold
 4. Name of the alarm
+
 ![auto recover](/assets/images/Xnip2019-01-30_13-14-24.jpg)
 
 {% include ads3.html %}
