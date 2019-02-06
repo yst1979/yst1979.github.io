@@ -25,7 +25,6 @@ Steps:<br>
 
 ![CloudWatch Events](/assets/images/Xnip2019-01-30_15-34-36.png)
 
-# Configure CloudWatch Events
 Navigate to CloudWatch Events Rules
 ![CloudWatch Events](/assets/images/Xnip2019-01-30_15-15-52.jpg)
 
