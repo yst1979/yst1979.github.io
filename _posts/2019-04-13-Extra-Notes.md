@@ -242,11 +242,11 @@ categories:
 * When a tampering event is detected, the HSM is designed to securely destroy the keys rather than risk compromise
 * Symmetric use <mark>A</mark> key and the same key to encrypt and decrypt data : AES-128, AES-256
 
-![CloudHSM](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Symmetric-Encryption.png)
+![CloudHSM](/assets/images/Symmetric-Encryption.png)
 
 * Assymetric use public and private keys to encrypt and decrypt data : RSA, DSA etc
 
-![CloudHSM](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Asymmetric-Encryption.png)
+![CloudHSM](/assets/images/Asymmetric-Encryption.png)
 
 * Recommended use at least 2 HSMs in 2 different AZs for production env ; for mission critical at least 3
 * Need to set S.G ; In order to talk to CloudHSM, client server needs to install agent
@@ -285,7 +285,7 @@ categories:
 # DirectConnect
 * Use direct connect gateway to connect on-premise to multi VPCs in <mark>different</mark> region
 
-![DirectConnect](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/dx-gateway.png)
+![DirectConnect](/assets/images/dx-gateway.png)
 
 # CloudTrail
 * Trail log can only save to S3
@@ -365,9 +365,9 @@ categories:
 * Support inter-region peering
 * EC2 talk to internet through IGW if it has public IP, talks to NAT then to IGW if it has private IP
 * VPC functions :
-	* ![VPC](/Users/yst/Documents/pics/Xnip2019-03-23_15-50-23.png)
+	* ![VPC](/assets/images/Xnip2019-03-23_15-50-23.png)
 * Subnet functions :
-	* ![VPC](/Users/yst/Documents/pics/Xnip2019-03-23_15-53-50.png)
+	* ![VPC](/assets/images/Xnip2019-03-23_15-53-50.png)
 * By default, all instances in a nondefault VPC receive an unresolvable host name that AWS assigns
 * You can assign your own domain name to your instances, and use up to four of your own DNS servers. To do that, you must specify a special set of DHCP options to use with the VPC
 * Differences between default and non-default VPC
@@ -382,18 +382,18 @@ categories:
 	* Ensure NAT has masquerade configured
 	* Restart NAT
 
-![VPC](/Users/yst/Documents/pics/Xnip2019-04-13_15-00-42.png)
+![VPC](/assets/images/Xnip2019-04-13_15-00-42.png)
 *
-![VPC](/Users/yst/Documents/pics/Xnip2019-04-13_15-02-25.png)
+![VPC](/assets/images/Xnip2019-04-13_15-02-25.png)
 
 
 
 # Networking
-![networking](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Pasted Graphic 31.png)
+![networking](/assets/images/Pasted Graphic 31.png)
 
-![networking](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Pasted Graphic 32.png)
+![networking](/assets/images/Pasted Graphic 32.png)
 
-![networking](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Pasted Graphic 33.png)
+![networking](/assets/images/Pasted Graphic 33.png)
 
 # ElastiCache
 * Memcached
@@ -454,7 +454,7 @@ categories:
 	* Mitigating Availability Zone Failures
 		* locate the clusters in as many availability zones as possible
 
-![networking](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/AWS-ElastiCache-Redis-vs-Memcached.png)
+![networking](/assets/images/AWS-ElastiCache-Redis-vs-Memcached.png)
 
 
 # WAF
@@ -588,7 +588,7 @@ categories:
 	* AWS organization service control policies (SCPs)
 	* Access control lists (ACL)
 
-![policies](/Users/yst/Documents/pics/Pasted Graphic 26.png)
+![policies](/assets/images/Pasted Graphic 26.png)
 
 * Switch role
 	* When switching role, only one set of permission is active ( IAM user or role ), when switching to role, you temporarily give up your IAM permission
@@ -642,7 +642,7 @@ categories:
 * Monitors your AWS environment for suspicious activity and generates findings
 * Allow you to add your own threat list and trusted IP lists
 
-![guardduty](/Users/yst/Documents/pics/Pasted Graphic 27.png)
+![guardduty](/assets/images/Pasted Graphic 27.png)
 
 # Trusted Advisor
 * Reduce Costs, Increase Performance, and Improve Security
@@ -665,7 +665,7 @@ categories:
 	6. RDS Public Snapshots
 	7. Service Limits
 
-![policies](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Pasted Graphic 40.png)
+![policies](/assets/images/Pasted Graphic 40.png)
 
 # Config
 * Continusly track resources inventory and changes aginst config rules
@@ -775,10 +775,10 @@ categories:
 * State Manager
 	* Similar to Run Command but different at, state manager can set schedule ( like cron ) so can repeatedly checking/setting the selected server at desired state ( chosen document state ).  Result is written to S3
 
-![policies](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Pasted Graphic 44.png)
+![policies](/assets/images/Pasted Graphic 44.png)
 
 # Step Functions
-![policies](/Users/yst/Google Drive/WiAdvance/AWS Certification/SysOPS/Pasted Graphic 45.png)
+![policies](/assets/images/Pasted Graphic 45.png)
 
 # OpsWork
 * <mark>Used to deply application stack</mark>
@@ -958,14 +958,14 @@ OpsWorks allows Shutdown recipes a configurable amount of time to perform their 
 * Create IAM role with session duration parameter, from 900 seconds (15 minutes) up to the Maximum CLI/API session duration setting for the role
 	* If you specify a value for the DurationSeconds parameter that is higher than the maximum setting, the operation fails
 
-![guardduty](/Users/yst/Documents/pics/Xnip2019-04-13_22-36-33.png)
+![guardduty](/assets/images/Xnip2019-04-13_22-36-33.png)
 *
-![guardduty](/Users/yst/Documents/pics/Xnip2019-04-13_22-36-45.png)
+![guardduty](/assets/images/Xnip2019-04-13_22-36-45.png)
 *
-![guardduty](/Users/yst/Documents/pics/Xnip2019-04-13_23-29-03.png)
+![guardduty](/assets/images/Xnip2019-04-13_23-29-03.png)
 *
-![guardduty](/Users/yst/Documents/pics/Xnip2019-04-07_00-20-18.png)
+![guardduty](/assets/images/Xnip2019-04-07_00-20-18.png)
 *
-![guardduty](/Users/yst/Documents/pics/Xnip2019-04-07_00-21-28.png)
+![guardduty](/assets/images/Xnip2019-04-07_00-21-28.png)
 *
-![guardduty](/Users/yst/Documents/pics/Xnip2019-04-07_00-22-08.png)
+![guardduty](/assets/images/Xnip2019-04-07_00-22-08.png)
